@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import '../pages/style2.css'
+import '../pages/css/style2.css'
 
 function PostItem({ data }) {
 
@@ -9,18 +9,18 @@ function PostItem({ data }) {
 
     return (
         <div className="post-item">
-            <div className="container-4">
-                <div className="overlap-group-4">
-                    <div className="background-4">
-                        <div className="text-wrapper-10">RED PIN</div>
+            <div className="image-container">
+                <div className="image-background">
+                    <div className="pin-color">
+                        <div className="pin-color-text">RED PIN</div>
                     </div>
-                    <div className="text-wrapper-11">User Post Img</div>
+                    <div className="image-text">User Post Img</div>
                 </div>
             </div>
-            <div className="text-wrapper-8">{data.userName}</div>
-            <div className="text-wrapper-9">{data.diaryTitle}</div>
-            <div className="details">공개 게시글</div>
-            <div className="details-2">영수증 인증 완료 게시글</div>
+            <div className="user-name-2">{data.userName}</div>
+            <div className="diary-title">{data.diaryTitle}</div>
+            <div className="privacy">공개 게시글</div>
+            <div className="receipt">영수증 인증 완료 게시글</div>
         </div>
     );
 }

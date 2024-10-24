@@ -1,5 +1,5 @@
 import PostItem from "./PostItem";
-import '../pages/style2.css'
+import '../pages/css/style2.css'
 
 function PostList() {
     // 12개의 테스트 데이터 생성
@@ -14,8 +14,6 @@ function PostList() {
         { id: 8, userName: 'User8', diaryTitle: 'DiaryTitle8' },
         { id: 9, userName: 'User9', diaryTitle: 'DiaryTitle9' },
         { id: 10, userName: 'User10', diaryTitle: 'DiaryTitle10' },
-        { id: 11, userName: 'User11', diaryTitle: 'DiaryTitle11' },
-        { id: 12, userName: 'User12', diaryTitle: 'DiaryTitle12' },
     ];
 
     return (

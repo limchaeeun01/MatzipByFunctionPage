@@ -1,0 +1,719 @@
+@font-face {
+    font-family: 'font-medium'; /* 사용할 폰트의 이름을 정의 */
+    src: url('../../fonts/GmarketSansTTFMedium.ttf'); /* 폰트 파일의 위치 */
+  }
+  
+  @font-face {
+    font-family: 'font-light'; /* 사용할 폰트의 이름을 정의 */
+    src: url('../../fonts/GmarketSansTTFLight.ttf'); /* 폰트 파일의 위치 */
+  }
+  
+  
+  .matzip-by-function {
+    background-color: #ffffff;
+    height: auto;
+    position: relative;
+    width: 100%;
+    display: flex; 
+    justify-content: center; 
+  } 
+  
+  .matzip-by-function .main-container {
+    height: auto;
+    width: 1314px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .matzip-by-function .title-container {
+    margin-top: 120px;
+    width: 100%;
+  }
+  
+  .matzip-by-function .title {
+    color: #000000;
+    font-family: "font-medium";
+    font-size: 30px;
+    width: 850px;
+  }
+  
+  .matzip-by-function .weather-post-area {
+    width: 100%;
+    margin-top: 20px;
+    height: 550px;
+  }
+  
+  .matzip-by-function .overlap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .matzip-by-function .weather-info {
+    background-color: #000000;
+    height: 100%;
+    position: absolute;
+    width: 400px;
+  }
+  
+  .matzip-by-function .temperature-1 {
+    color: #ffffff;
+    font-family: 'GmarketSansMedium', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    height: 80px;
+    left: 216px;
+    line-height: normal;
+    position: absolute;
+    top: 80px;
+    width: 254px;
+  }
+  
+  .matzip-by-function .temperature-2 {
+    color: #ffffff;
+    font-family: "font-light";
+    font-size: 25px;
+    font-weight: 400;
+    height: 43px;
+    left: 218px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 140px;
+    white-space: nowrap;
+    width: 213px;
+  }
+  
+  .matzip-by-function .temperature-3 {
+    color: #ffffff;
+    font-family: "font-light";
+    font-size: 23px;
+    font-weight: 400;
+    height: 43px;
+    left: 46px;
+    line-height: normal;
+    position: absolute;
+    top: 230px;
+    width: 330px;
+  }
+  
+  .matzip-by-function .weather-text {
+    color: #ffffff;
+    font-family: "font-light";
+    font-size: 30px;
+    font-weight: 400;
+    height: 189px;
+    left: 46px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 260px;
+    width: 403px;
+  }
+  
+  .matzip-by-function .scrollArea {
+    background-color: #ffffff50;
+    border-radius: 10px;
+    height: 3px;
+    left: 50px;
+    position: absolute;
+    top: 400px;
+    width: 160px;
+  }
+  
+  .matzip-by-function .scrollBar {
+    background-color: #ffffff;
+    border-radius: 10px;
+    height: 3px;
+    left: 54px;
+    position: relative;
+    width: 80px;
+  }
+  
+  .matzip-by-function .button-previous {
+    height: 45px;
+    left: 50px;
+    position: absolute;
+    top: 450px;
+    width: 45px;
+  }
+  
+  .matzip-by-function .button-next {
+    height: 45px;
+    left: 114px;
+    position: absolute;
+    top: 450px;
+    width: 45px;
+  }
+  
+  .matzip-by-function .weather-icon {
+    height: 160px;
+    left: 33px;
+    position: absolute;
+    top: 67px;
+    width: 160px;
+  }
+  
+  .matzip-by-function .linear-essentional-UI-umbrella {
+    left: 5px !important;
+  }
+  
+  /* 무한 슬라이딩 배너 */
+  
+  .wrapper {
+    overflow: hidden;
+    margin-left: 350px;
+    width: 1000px;
+  }
+  
+  .wrapper .slide_container {
+    width: 100%;
+    margin-top: 170px;
+    height: auto; 
+  }
+  
+  .wrapper .slide_container .slide_wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .wrapper .slide_container .slide {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    height: auto;
+  }
+  
+  .wrapper .slide_container .slide.original {
+    animation: 30s linear infinite normal none running infiniteAnimation1;
+  }
+  
+  .wrapper .slide_container .slide.clone {
+    animation: 30s linear infinite infiniteAnimation2;
+  }
+  
+  .wrapper .slide_container .slide.stop {
+    animation-play-state: paused;
+  }
+  
+  .wrapper .slide_container .slide li {
+    cursor: pointer;
+    z-index: 2;
+    transition: transform 0.3s; /* 애니메이션 속성을 더 명확하게 설정 */
+    transform: scale(1);
+    margin: 0 1.2%; /* 간격 설정 통합 */
+    height: auto; /* 각 리스트 아이템의 세로 길이를 100%로 설정 */
+    display: flex; /* Flexbox 사용 */
+    justify-content: center; /* 중앙 정렬 */
+    align-items: center; /* 중앙 정렬 */
+  }
+  
+  .slide li .item img {
+    width: auto; /* 가로 크기를 자동으로 설정 */
+    height: 350px; /* 높이를 300px로 고정 */
+    object-fit: contain; /* 비율을 유지하며 이미지 전체가 들어가도록 조정 */
+  }
+  
+  .wrapper .slide_container .slide li:hover {
+    transform: scale(0.98);
+  }
+  
+  .wrapper .slide_container .slide li:hover::after {
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  @keyframes infiniteAnimation1 {
+    0% {
+      transform: translateX(0%);
+    }
+    50% {
+      transform: translateX(-100%);
+    }
+    50.1% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  @keyframes infiniteAnimation2 {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-200%);
+    }
+  }
+  
+  .matzip-by-function .post1 {
+    width: auto; /* 가로 크기를 자동으로 설정 */
+    height: 300px; /* 높이를 300px로 고정 */
+    object-fit: contain; /* 비율을 유지하며 이미지 전체가 들어가도록 조정 */
+  }
+  
+  .matzip-by-function .frame {
+    background-position: 50% 50%;
+    background-size: cover;
+    height: auto;
+  }
+  
+  .matzip-by-function .feeling-post-area {
+    height: auto;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  /* 감정 버튼 */
+  
+  .matzip-by-function .feeling-btn-container {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+  }
+  
+  .matzip-by-function .label-1.active,
+  .matzip-by-function .label-2.active,
+  .matzip-by-function .label-3.active,
+  .matzip-by-function .label-4.active,
+  .matzip-by-function .label-5.active,
+  .matzip-by-function .label-6.active {
+    background-color: #c3c3c3; /* 짙은 회색 */
+    cursor: pointer;
+  }
+  
+  .matzip-by-function .label-1 {
+    background-color: #ebebeb;
+    height: 30px;
+    width: 80px;
+  }
+  
+  .matzip-by-function .item-link-wrapper {
+    background-image: url(../../../public/img/border.svg);
+    background-size: 100% 100%;
+    height: 35px;
+  }
+  
+  .matzip-by-function .item-link {
+    height: 100%;
+    left: 39px;
+    position: relative;
+    top: 6px;
+    width: 35px;
+  }
+  
+  .matzip-by-function .feeling-text {
+    color: #333333;
+    font-family: "Abel", Helvetica;
+    font-size: 13px;
+    left: 1px;
+    white-space: nowrap;
+    width: 35px;
+  }
+  
+  .matzip-by-function .label-2 {
+    background-color: #ebebeb;
+    margin-left: 15px;
+    height: 30px;
+    width: 80px;
+  }
+  
+  
+  .matzip-by-function .overlap-group-3 {
+    background-color: #f1f3f8;
+    background-image: url(../../../public/img/smiley.png);
+    background-size: 100% 100%;
+    border-radius: 13.5px;
+    height: 25px;
+    left: 7px;
+    position: relative;
+    top: 5px;
+    width: 25px;
+  }
+  
+  .matzip-by-function .item-link-6 {
+    height: 25px;
+    left: 39px;
+    position: absolute;
+    top: 6px;
+    width: 25px;
+  }
+  
+  .matzip-by-function .label-3 {
+    background-color: #ebebeb;
+    margin-left: 15px;
+    height: 30px;
+    width: 80px;
+  }
+  
+  .matzip-by-function .overlap-2 {
+    height: 38px;
+    position: relative;
+    width: 80px;
+  }
+  
+  .matzip-by-function .item-link-2 {
+    height: 26px;
+    left: 39px;
+    position: absolute;
+    top: 6px;
+    width: 35px;
+  }
+  
+  
+  .matzip-by-function .img {
+    height: 25px;
+    left: 7px;
+    position: absolute;
+    top: 3px;
+    width: 25px;
+  }
+  
+  .matzip-by-function .label-4 {
+    background-color: #ebebeb;
+    margin-left: 15px;
+    height: 30px;
+    width: 95px;
+  }
+  
+  .matzip-by-function .overlap-3 {
+    height: 38px;
+    position: relative;
+  }
+  
+  .matzip-by-function .item-link-3 {
+    height: 26px;
+    left: 40px;
+    position: absolute;
+    top: 6px;
+    width: 50px;
+  }
+  
+  
+  .matzip-by-function .overlap-group-2 {
+    height: 26px;
+    left: 7px;
+    position: absolute;
+    top: 3px;
+    width: 27px;
+  }
+  
+  .matzip-by-function .background-3 {
+    background-color: #f1f3f8;
+    border-radius: 13.5px;
+    height: 26px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 26px;
+  }
+  
+  .matzip-by-function .img-2 {
+    height: 25px;
+    left: 1px;
+    position: absolute;
+    width: 25px;
+  }
+  
+  .matzip-by-function .label-6 {
+    background-color: #ebebeb;
+    margin-left: 15px;
+    height: 30px;
+    top: 5px;
+    width: 95px;
+  }
+  
+  .matzip-by-function .item-link-4 {
+    height: 26px;
+    left: 39px;
+    position: absolute;
+    top: 6px;
+    width: 50px;
+  }
+  
+  .matzip-by-function .label-5 {
+    background-color: #ebebeb;
+    height: 30px;
+    margin-left: 15px;
+    top: 5px;
+    width: 110px;
+  }
+  
+  .matzip-by-function .overlap-4 {
+    height: 38px;
+    position: relative;
+    width: 114px;
+  }
+  
+  .matzip-by-function .item-link-5 {
+    height: 26px;
+    left: 42px;
+    position: absolute;
+    top: 6px;
+    width: 68px;
+  }
+  
+  /* 감정 맛집 리스트 */
+  
+  .matzip-by-function .feeling-post-list {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  .post-list {
+    display: flex;
+    flex-wrap: wrap;         
+    justify-content: space-between; 
+    gap: 10px;    
+    margin-top: 30px;            
+  }
+  
+  .post-item {
+    flex: 1 1 calc(20% - 10px); /* 한 줄에 5개씩 배치 */
+    max-width: calc(20% - 10px); 
+    box-sizing: border-box;    
+    height: auto;
+    width: auto;
+    margin-bottom: 50px;
+  }
+  
+  .matzip-by-function .image-container {
+    height: 300px;
+    overflow: hidden;
+    width: 200px;
+  }
+  
+  .matzip-by-function .image-background {
+    background-color: #d9d9d9;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  .matzip-by-function .pin-color {
+    background-color: #f40159;
+    height: 25px;
+    width: 80px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+  }
+  
+  .matzip-by-function .pin-color-text {
+    color: #ffffff;
+    font-family: "Abel", Helvetica;
+    font-size: 13px;
+  }
+  
+  .matzip-by-function .image-text {
+    color: #000000;
+    font-family: "Abel", Helvetica;
+    font-size: 16px;
+    z-index: 1; /* 텍스트가 이미지 위에 위치하게 설정 */
+  }
+  
+  .matzip-by-function .user-name-2 {
+    color: #333333;
+    font-family: "Abel", Helvetica;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 10px;
+    height: 19px;
+    width: 90px;
+  }
+  
+  .matzip-by-function .diary-title {
+    color: #333333;
+    font-family: "font-medium";
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 15px;
+    line-height: 30px;
+    width: 260px;
+  }
+  
+  .matzip-by-function .privacy {
+    color: #333333;
+    font-family: "Abel", Helvetica;
+    font-size: 13px;
+    margin-top: 10px;
+    white-space: nowrap;
+    width: 232px;
+  }
+  
+  .matzip-by-function .receipt {
+    color: #333333;
+    font-family: "Abel", Helvetica;
+    font-size: 13px;
+    font-weight: 400;
+    height: 18px;
+    margin-top: 5px;
+    white-space: nowrap;
+    width: 232px;
+  }
+  
+  
+  
+  
+  /* 페이지네이션 */
+  
+  .pagination-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  
+  /* Today's top reading */
+  
+  .matzip-by-function .today-top-reading {
+    height: 1108px;
+  }
+  
+  .matzip-by-function .top-post-area {
+    height: 412px;
+    margin-top: 50px;
+  }
+  
+  .matzip-by-function .horizontal-list {
+    display: flex;
+    width: auto;
+    height: auto;
+  }
+  
+  .matzip-by-function .top-reading-item-1 {
+    border-color: #000000;
+    border-top-style: solid;
+    border-top-width: 4px;
+    flex-direction: column;
+    margin-left: 7px;
+    margin-right: 7px;
+    height: 220px;
+    width: 650px;
+  }
+  
+  .matzip-by-function .top-reading-item-2 {
+    border-color: #00000033;
+    border-top-style: solid;
+    border-top-width: 1px;
+    margin-left: 7px;
+    margin-right: 7px;
+    height: 192px;
+    width: 650px;
+  }
+  
+  .horizontal-container {
+    display: flex;
+    margin-top: 15px;
+  }
+  
+  .matzip-by-function .user-name {
+    color: #222222;
+    font-family: "Abel", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    height: 16px;
+    line-height: 16px;
+    top: 12px;
+    white-space: nowrap;
+    width: 75px;
+  }
+  
+  .matzip-by-function .price {
+    color: #222222;
+    font-family: "Abel", Helvetica;
+    font-size: 8px;
+    white-space: nowrap;
+    margin-left: 5px;
+    margin-top: 4px;
+  }
+  
+  
+  .matzip-by-function .post-reading-title-1 {
+    color: #222222;
+    font-family: "Abel", Helvetica;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  
+  .matzip-by-function .post-reading-title-2 {
+    font-size: 12px;
+    margin-left: 5px;
+  }
+  
+  
+  .matzip-by-function .reading-count {
+    color: #222222;
+    font-family: "Abel", Helvetica;
+    margin-top: 15px;
+    font-size: 18px;
+    white-space: nowrap;
+  }
+  
+  
+  
+  /* 글쓰기 컨텐츠 */
+  
+  .matzip-by-function .writing-contents-area {
+    height: auto;
+    margin-top: 100px;
+  }
+  
+  .matzip-by-function .writing-item-1 {
+    background-color: #485168;
+    height: 270px;
+    width: 650px;
+    margin-right: 7px;
+  }
+  
+  .matzip-by-function .writing-item-2 {
+    background-color: #684852;
+    height: 270px;
+    width: 650px;
+    margin-left: 7px;
+  }
+  
+  .matzip-by-function .writing-title {
+    color: #ffffff;
+    font-family: "font-light";
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 40px;
+  }
+  
+  
+  .matzip-by-function .writing-text {
+    color: #ffffff;
+    font-family: "font-medium";
+    font-size: 27px;
+    margin-top: 50px;
+    margin-left: 40px;
+  }
+  
+  .matzip-by-function .arrow-button {
+    object-fit: cover;
+    width: 90%;
+  }
+
+ .empty-area {
+    height: 200px;
+ }
