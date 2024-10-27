@@ -3,7 +3,7 @@ import { LinearArrowsActionLogin2 } from "../icons/LinearArrowsActionLogin2";
 import { LinearMessagesConversationChatRoundMoney } from "../icons/LinearMessagesConversationChatRoundMoney";
 import { LinearNotificationsBell } from "../icons/LinearNotificationsBell";
 import { LinearUsersUserRounded1 } from "../icons/LinearUsersUserRounded1";
-import { MatzipByFunction2 } from "./MatzipByFunction2";
+import { MatzipByFunction } from "./MatzipByFunction";
 import PostFooter from "./PostFooter";
 import "./css/header.css";
 
@@ -63,7 +63,7 @@ function PostMainHeader () {
         </div>
     </div>
     <div className="main">
-      <MatzipByFunction2/>
+      <MatzipByFunction/>
     </div>
     <div className="footer">
       <PostFooter/>

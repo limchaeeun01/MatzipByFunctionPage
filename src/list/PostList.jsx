@@ -1,5 +1,5 @@
 import PostItem from "./PostItem";
-import '../pages/css/style2.css'
+import '../pages/css/style.css'
 
 function PostList() {
     // 12개의 테스트 데이터 생성
