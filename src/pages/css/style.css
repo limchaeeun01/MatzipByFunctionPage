@@ -45,82 +45,59 @@
   }
   
   .matzip-by-function .overlap {
-    position: relative;
     width: 100%;
     height: 100%;
+    position: relative; /* overlap을 기준으로 요소 배치 */
   }
   
   .matzip-by-function .weather-info {
     background-color: #000000;
-    height: 100%;
-    position: absolute;
-    width: 400px;
-    z-index: 1;
+    height: 550px;
+    width: 450px;
+    justify-items: center;
+    position: relative; /* 상대 위치 지정 */
+    z-index: 2; /* wrapper보다 높은 z-index */
+    position: absolute; /* overlap을 기준으로 절대 위치 지정 */
+    top: 0; /* overlap의 맨 위에 배치 */
+    left: 0; /* overlap의 왼쪽에 배치 */
   }
   
   .matzip-by-function .temperature-1 {
     color: #ffffff;
     font-family: 'GmarketSansMedium', sans-serif;
     font-size: 40px;
-    font-weight: 400;
-    height: 80px;
-    left: 216px;
-    line-height: normal;
-    position: absolute;
-    top: 80px;
-    width: 254px;
+    margin-left: 20px;
+    margin-top: 50px;
   }
   
   .matzip-by-function .temperature-2 {
     color: #ffffff;
     font-family: "font-light";
     font-size: 25px;
-    font-weight: 400;
-    height: 43px;
-    left: 218px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 140px;
-    white-space: nowrap;
-    width: 213px;
+    margin-left: 20px;
+    margin-top: 10px;
   }
   
   .matzip-by-function .temperature-3 {
     color: #ffffff;
     font-family: "font-light";
     font-size: 23px;
-    font-weight: 400;
-    height: 43px;
-    left: 46px;
-    line-height: normal;
-    position: absolute;
-    top: 230px;
-    width: 330px;
+    padding-top: 80px;
   }
   
   .matzip-by-function .weather-text {
     color: #ffffff;
     font-family: "font-light";
     font-size: 30px;
-    font-weight: 400;
-    height: 189px;
-    left: 46px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 260px;
-    width: 403px;
+    padding-top: 20px;
   }
   
   .matzip-by-function .scrollArea {
     background-color: #ffffff50;
     border-radius: 10px;
     height: 3px;
-    left: 50px;
-    position: absolute;
-    top: 400px;
     width: 160px;
+    margin-top: 70px;
   }
   
   .matzip-by-function .scrollBar {
@@ -131,27 +108,26 @@
     position: relative;
     width: 80px;
   }
-  
+
+  .button-area {
+    display: flex; 
+    margin-top: 30px;
+    gap: 20px; 
+    justify-content: center; 
+}
+
   .matzip-by-function .button-previous {
     height: 45px;
-    left: 50px;
-    position: absolute;
-    top: 450px;
     width: 45px;
   }
   
   .matzip-by-function .button-next {
     height: 45px;
-    left: 114px;
-    position: absolute;
-    top: 450px;
     width: 45px;
   }
   
   .matzip-by-function .weather-icon {
-    left: 33px;
-    position: absolute;
-    top: 50px;
+    margin-top: 30px;
     width: 140px; /* 가로 크기를 150px로 고정 */
     height: 140px; /* 세로 크기를 150px로 고정 */
   }
@@ -162,23 +138,46 @@
     object-fit: contain; /* 비율을 유지하며 이미지 전체가 들어가도록 조정 */
   }
   
-  
-  .matzip-by-function .linear-essentional-UI-umbrella {
-    left: 5px !important;
+
+  @media (max-width: 1200px) { /* 가로폭이 1200px 이하일 때 */
+    .matzip-by-function .weather-info {
+        width: 100%;
+        position: static; /* 절대 위치를 해제하여 기본 흐름에 따르게 설정 */
+        margin-bottom: 20px; /* 아래로 내렸을 때 간격 추가 */
+    }
+
+    .overlap {
+        flex-direction: column; /* 수직 정렬 */
+        width: 100%;
+        height: auto;
+    }
+
+    .wrapper {
+        overflow: hidden;
+        width: 100%;
+        height: auto; /* 높이를 자동으로 조정 */
+    }
+
+    .slide_container {
+      width: 100%;
+      height: auto;
+      margin-top: 0 !important; /* 여백을 강제로 제거 */
+    }
   }
-  
   /* 무한 슬라이딩 배너 */
   
   .wrapper {
     overflow: hidden;
+    height: 100%;
     width: 100%;
-    z-index: 0;
+    position: relative; /* 상대 위치 지정 */
+    z-index: 1; /* wrapper보다 높은 z-index */
   }
   
   .wrapper .slide_container {
     width: 100%;
-    margin-top: 170px;
-    height: auto; 
+    margin-top: 150px;
+    height: 100%; 
   }
   
   .wrapper .slide_container .slide_wrapper {
@@ -384,12 +383,24 @@
   }
   
   .post-list {
+    width: 100%;
+    margin-top: 30px;  
+  }
+
+  .post-items {
     display: flex;
     flex-wrap: wrap;         
     justify-content: space-between; 
+    height: 931px;
+    width: 100%;
     gap: 10px;    
-    margin-top: 30px;            
-}
+  }
+
+  .pagination-container {
+    display: flex;
+    justify-content: center; 
+    margin-top: 20px; 
+  }
 
   .post-item {
     flex: 1 1 calc(20% - 10px); /* 기본 한 줄에 5개씩 배치 */
@@ -405,6 +416,10 @@
     .post-item {
         flex: 1 1 calc(50% - 10px); /* 한 줄에 2개씩 배치 */
         max-width: calc(50% - 10px);
+    }
+
+    .post-items{
+      height: auto;
     }
   }
 
@@ -605,6 +620,7 @@
     font-size: 23px;
     padding-top: 50px;
     padding-left: 40px;
+    padding-right: 10px;
   }
   
   .matzip-by-function .arrow-button {

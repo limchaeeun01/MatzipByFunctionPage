@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./css/style.css";
 import PostList from "../list/PostList";
 
-import { Pagination, Container, Grid } from '@mui/material';
+import { Container, Grid } from '@mui/material';
 
 export const MatzipByFunction = () => {
   /* 무한 롤링 배너 */
@@ -36,6 +36,24 @@ export const MatzipByFunction = () => {
     }
   };
 
+  /* 테스트 데이터 */
+  const testData = [
+    { id: 1, userName: 'User1', diaryTitle: 'DiaryTitle1' },
+    { id: 2, userName: 'User2', diaryTitle: 'DiaryTitle2' },
+    { id: 3, userName: 'User3', diaryTitle: 'DiaryTitle3' },
+    { id: 4, userName: 'User4', diaryTitle: 'DiaryTitle4' },
+    { id: 5, userName: 'User5', diaryTitle: 'DiaryTitle5' },
+    { id: 6, userName: 'User6', diaryTitle: 'DiaryTitle6' },
+    { id: 7, userName: 'User7', diaryTitle: 'DiaryTitle7' },
+    { id: 8, userName: 'User8', diaryTitle: 'DiaryTitle8' },
+    { id: 9, userName: 'User9', diaryTitle: 'DiaryTitle9' },
+    { id: 10, userName: 'User10', diaryTitle: 'DiaryTitle10' },
+    { id: 11, userName: 'User11', diaryTitle: 'DiaryTitle11' },
+    { id: 12, userName: 'User12', diaryTitle: 'DiaryTitle12' },
+    { id: 13, userName: 'User13', diaryTitle: 'DiaryTitle13' },
+    { id: 14, userName: 'User14', diaryTitle: 'DiaryTitle14' },
+    { id: 15, userName: 'User15', diaryTitle: 'DiaryTitle15' },
+];
 
   return (
     <div className="matzip-by-function">
@@ -47,31 +65,37 @@ export const MatzipByFunction = () => {
             </div>
             <div className="overlap">
               <div className="weather-info">
-                <div className="temperature-1">16.5 °</div>
-                <div className="temperature-2">체감(16.5°)</div>
+                <div className="horizontal-container">
+                  <div className="weather-icon">
+                    <img
+                      src="/img/umbrella-icon.png"
+                    />
+                  </div>
+                  <div>
+                    <div className="temperature-1">16.5 °</div>
+                    <div className="temperature-2">체감(16.5°)</div>
+                  </div>
+                </div>
+                
                 <div className="temperature-3">어제보다 7° 낮아요</div>
 
-                <p className="weather-text">빗소리와 함께 하면 <br />좋은 음식</p>
+                <p className="weather-text">빗소리와 함께 하면 좋은 음식</p>
 
                 <div className="scrollArea">
                   <div className="scrollBar" />
                 </div>
 
-                <img
-                  className="button-previous"
-                  alt="Button previous"
-                  src="/img/button-previous-slide.png"
-                />
-
-                <img
-                  className="button-next"
-                  alt="Button next slide"
-                  src="/img/button-next-slide.png"
-                />
-
-                <div className="weather-icon">
+                <div className="button-area">
                   <img
-                    src="/img/umbrella-icon.png"
+                    className="button-previous"
+                    alt="Button previous"
+                    src="/img/button-previous-slide.png"
+                  />
+
+                  <img
+                    className="button-next"
+                    alt="Button next slide"
+                    src="/img/button-next-slide.png"
                   />
                 </div>
               </div>
@@ -204,11 +228,7 @@ export const MatzipByFunction = () => {
             </Container>
 
             <div className="feeling-post-list">
-              <PostList/>
-            </div>
-
-            <div className="pagination-area">
-              <Pagination count={10} />
+              <PostList data={testData}/>
             </div>
           
           </Container>
