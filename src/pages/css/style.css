@@ -18,39 +18,39 @@
     justify-content: center; 
   } 
   
-  .matzip-by-function .main-container {
+   .main-container {
     height: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
   }
   
-  .matzip-by-function .title-container {
+   .title-container {
     margin-top: 120px;
     width: 100%;
     margin-bottom: 10px;
   }
   
-  .matzip-by-function .title {
+   .title {
     color: #000000;
     font-family: "font-medium";
     font-size: 30px;
     width: 850px;
   }
   
-  .matzip-by-function .weather-post-area {
+   .weather-post-area {
     width: 100%;
     margin-top: 20px;
     height: auto;
   }
   
-  .matzip-by-function .overlap {
+   .overlap {
     width: 100%;
     height: 100%;
     position: relative; /* overlap을 기준으로 요소 배치 */
   }
   
-  .matzip-by-function .weather-info {
+   .weather-info {
     background-color: #000000;
     height: 550px;
     width: 450px;
@@ -62,7 +62,7 @@
     left: 0; /* overlap의 왼쪽에 배치 */
   }
   
-  .matzip-by-function .temperature-1 {
+   .temperature-1 {
     color: #ffffff;
     font-family: 'GmarketSansMedium', sans-serif;
     font-size: 40px;
@@ -70,7 +70,7 @@
     margin-top: 50px;
   }
   
-  .matzip-by-function .temperature-2 {
+   .temperature-2 {
     color: #ffffff;
     font-family: "font-light";
     font-size: 25px;
@@ -78,21 +78,21 @@
     margin-top: 10px;
   }
   
-  .matzip-by-function .temperature-3 {
+   .temperature-3 {
     color: #ffffff;
     font-family: "font-light";
     font-size: 23px;
     padding-top: 80px;
   }
   
-  .matzip-by-function .weather-text {
+   .weather-text {
     color: #ffffff;
     font-family: "font-light";
     font-size: 30px;
     padding-top: 20px;
   }
   
-  .matzip-by-function .scrollArea {
+   .scrollArea {
     background-color: #ffffff50;
     border-radius: 10px;
     height: 3px;
@@ -100,7 +100,7 @@
     margin-top: 70px;
   }
   
-  .matzip-by-function .scrollBar {
+   .scrollBar {
     background-color: #ffffff;
     border-radius: 10px;
     height: 3px;
@@ -116,23 +116,23 @@
     justify-content: center; 
 }
 
-  .matzip-by-function .button-previous {
+   .button-previous {
     height: 45px;
     width: 45px;
   }
   
-  .matzip-by-function .button-next {
+   .button-next {
     height: 45px;
     width: 45px;
   }
   
-  .matzip-by-function .weather-icon {
+   .weather-icon {
     margin-top: 30px;
     width: 140px; /* 가로 크기를 150px로 고정 */
     height: 140px; /* 세로 크기를 150px로 고정 */
   }
   
-  .matzip-by-function .weather-icon img {
+   .weather-icon img {
     width: 100%; /* 이미지가 부모 요소의 가로 크기에 맞게 조정 */
     height: 100%; /* 이미지가 부모 요소의 세로 크기에 맞게 조정 */
     object-fit: contain; /* 비율을 유지하며 이미지 전체가 들어가도록 조정 */
@@ -140,7 +140,7 @@
   
 
   @media (max-width: 1200px) { /* 가로폭이 1200px 이하일 때 */
-    .matzip-by-function .weather-info {
+     .weather-info {
         width: 100%;
         position: static; /* 절대 위치를 해제하여 기본 흐름에 따르게 설정 */
         margin-bottom: 20px; /* 아래로 내렸을 때 간격 추가 */
@@ -254,20 +254,20 @@
       }
   }
   
-  .matzip-by-function .post1 {
+   .post1 {
     width: auto; 
     height: 300px; 
     object-fit: contain; /* 비율을 유지하며 이미지 전체가 들어가도록 조정 */
     padding: 10px;
   }
   
-  .matzip-by-function .frame {
+   .frame {
     background-position: 50% 50%;
     background-size: cover;
     height: auto;
   }
   
-  .matzip-by-function .feeling-post-area {
+   .feeling-post-area {
     height: auto;
     display: flex;
     width: 100%;
@@ -283,24 +283,24 @@
     justify-content: center;
   }
 
-  .matzip-by-function .label-1,
-  .matzip-by-function .label-2,
-  .matzip-by-function .label-3,
-  .matzip-by-function .label-4,
-  .matzip-by-function .label-5,
-  .matzip-by-function .label-6 {
+   .label-1,
+   .label-2,
+   .label-3,
+   .label-4,
+   .label-5,
+   .label-6 {
     height: 30px;
     background-color: #ebebeb;
     border-radius: 5px;
     flex-grow: 0;
   }
   
-  .matzip-by-function .label-1.active,
-  .matzip-by-function .label-2.active,
-  .matzip-by-function .label-3.active,
-  .matzip-by-function .label-4.active,
-  .matzip-by-function .label-5.active,
-  .matzip-by-function .label-6.active {
+   .label-1.active,
+   .label-2.active,
+   .label-3.active,
+   .label-4.active,
+   .label-5.active,
+   .label-6.active {
     background-color: #c3c3c3; 
     cursor: pointer;
   }
@@ -311,31 +311,31 @@
     }
   }
   
-  .matzip-by-function .label-1 {
+   .label-1 {
     width: 72px;
   }
 
-  .matzip-by-function .label-2 {
+   .label-2 {
     width: 72px;
   }
   
-  .matzip-by-function .label-3 {
+   .label-3 {
     width: 72px;
   }
 
-  .matzip-by-function .label-4 {
+   .label-4 {
     width: 87px;
   }
 
-  .matzip-by-function .label-5 {
+   .label-5 {
     width: 97px;
   }
 
-  .matzip-by-function .label-6 {
+   .label-6 {
     width: 87px;
   }
   
-  .matzip-by-function .feeling-text {
+   .feeling-text {
     color: #333333;
     font-family: "Abel", Helvetica;
     font-size: 13px;
@@ -345,7 +345,7 @@
     white-space: nowrap;
   }
 
-  .matzip-by-function .feeling-img {
+   .feeling-img {
     height: 25px;
     left: 7px;
     position: absolute;
@@ -354,18 +354,18 @@
   }
   
 
-  .matzip-by-function .overlap-level-2 {
+   .overlap-level-2 {
     height: 100%;
     position: relative;
     width: 100%;
   }
   
-  .matzip-by-function .overlap-level-3 {
+   .overlap-level-3 {
     height: 38px;
     position: relative;
   }
   
-  .matzip-by-function .overlap-level-4 {
+   .overlap-level-4 {
     height: 38px;
     position: relative;
     width: 114px;
@@ -373,7 +373,7 @@
   
   /* 감정 맛집 리스트 */
   
-  .matzip-by-function .feeling-post-list {
+   .feeling-post-list {
     height: auto;
     width: 100%;
     display: flex;
@@ -402,12 +402,11 @@
   }
 
   .post-item {
-    flex: 1 1 calc(20% - 10px); /* 기본 한 줄에 5개씩 배치 */
-    max-width: calc(20% - 10px); 
+    flex: 1 1 calc(25% - 10px); /* 기본 한 줄에 4개씩 배치 */
+    max-width: calc(25% - 10px); 
     box-sizing: border-box;    
     margin-bottom: 50px;
     align-items: center;
-    justify-items: center;
   }
   
   /* 반응형 설정: 화면이 1200px 이하일 때 */
@@ -422,14 +421,15 @@
     }
   }
 
-  .matzip-by-function .image-container {
+   .image-container {
     height: 300px;
     overflow: hidden;
     width: 100%;
+    border-radius: 40px;
   }
   
-  .matzip-by-function .image-background {
-    background-color: #d9d9d9;
+   .image-background {
+    background-color: #e7e7e7;
     height: 100%;
     position: relative;
     width: 100%;
@@ -438,63 +438,78 @@
     align-items: center; 
   }
   
-  .matzip-by-function .pin-color {
+   .pin-color {
     background-color: #f40159;
-    height: 25px;
-    width: 80px;
     display: flex; 
     justify-content: center; 
     align-items: center; 
     position: absolute; 
-    top: 0; 
-    left: 0; 
+    padding: 7px 15px;
+    top: 40px;
+    left: 0px;
   }
   
-  .matzip-by-function .pin-color-text {
+   .pin-color-text {
     color: #ffffff;
     font-family: "Abel", Helvetica;
     font-size: 13px;
   }
   
-  .matzip-by-function .image-text {
+   .image-text {
     color: #000000;
     font-family: "Abel", Helvetica;
     font-size: 16px;
     z-index: 1; /* 텍스트가 이미지 위에 위치하게 설정 */
   }
 
-  .info-area {
-    width: 100%;
+  .post-info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-family: "font-light";
+    gap: 10px;
+
+    .user-name-2 {
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    .post-title {
+        font-family: "font-medium";
+    }
+
+    .badge {
+        display: flex;
+        gap: 5px;
+    }
+
+    .receipt-mark {
+        color: #00B058;
+        font-family: "font-light";
+        height: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .check-icon {
+        color: rgb(55, 48, 78);
+        background-color: #08f77f;
+        width: 20px;
+        height: 20px;
+        padding: 2px 2px;
+        margin-left: 10px;
+        border-radius: 10px;
+    }
+
   }
 
-  .matzip-by-function .user-name-2 {
-    color: #333333;
-    font-family: "Abel", Helvetica;
-    font-size: 13px;
-    margin-top: 10px;
-  }
+   
   
-  .matzip-by-function .diary-title {
-    color: #333333;
+   .diary-title {
     font-family: "font-medium";
-    font-size: 18px;
-    margin-top: 15px;
   }
   
-  .matzip-by-function .privacy {
-    color: #333333;
-    font-family: "Abel", Helvetica;
-    font-size: 13px;
-    margin-top: 10px;
-  }
-  
-  .matzip-by-function .receipt {
-    color: #333333;
-    font-family: "Abel", Helvetica;
-    font-size: 13px;
-    margin-top: 5px;
-  }
-  
+
   
   /* 페이지네이션 */
   
@@ -507,21 +522,21 @@
   
   /* Today's top reading */
   
-  .matzip-by-function .today-top-reading {
+   .today-top-reading {
     height: 1108px;
   }
   
-  .matzip-by-function .top-post-area {
+   .top-post-area {
     margin-top: 50px;
   }
   
-  .matzip-by-function .horizontal-list {
+   .horizontal-list {
     display: flex;
     width: auto;
     height: auto;
   }
   
-  .matzip-by-function .top-reading-item-1 {
+   .top-reading-item-1 {
     border-color: #000000;
     border-top-style: solid;
     border-top-width: 4px;
@@ -532,7 +547,7 @@
     width: 100%;
   }
   
-  .matzip-by-function .top-reading-item-2 {
+   .top-reading-item-2 {
     border-color: #00000033;
     border-top-style: solid;
     border-top-width: 1px;
@@ -547,14 +562,14 @@
     margin-top: 15px;
   }
 
-  .matzip-by-function .user-name {
+   .user-name {
     color: #222222;
     font-family: "Abel", Helvetica;
     font-size: 16px;
     top: 12px;
   }
   
-  .matzip-by-function .price {
+   .price {
     color: #222222;
     font-family: "Abel", Helvetica;
     font-size: 10px;
@@ -563,20 +578,20 @@
   }
   
   
-  .matzip-by-function .post-reading-title-1 {
+   .post-reading-title-1 {
     color: #222222;
     font-family: "Abel", Helvetica;
     font-size: 22px;
   }
   
-  .matzip-by-function .post-reading-title-2 {
+   .post-reading-title-2 {
     font-size: 12px;
     margin-left: 5px;
     margin-top: 4px;
   }
   
   
-  .matzip-by-function .reading-count {
+   .reading-count {
     color: #222222;
     font-family: "Abel", Helvetica;
     margin-top: 15px;
@@ -586,24 +601,24 @@
   
   /* 글쓰기 컨텐츠 */
   
-  .matzip-by-function .writing-contents-area {
+   .writing-contents-area {
     height: auto;
     margin-top: 100px;
   }
   
-  .matzip-by-function .writing-item-1 {
+   .writing-item-1 {
     background-color: #485168;
     height: 270px;
     width: 100%;
   }
   
-  .matzip-by-function .writing-item-2 {
+   .writing-item-2 {
     background-color: #684852;
     height: 270px;
     width: 100%;
   }
   
-  .matzip-by-function .writing-title {
+   .writing-title {
     color: #ffffff;
     font-family: "font-light";
     font-size: 20px;
@@ -612,7 +627,7 @@
   }
   
   
-  .matzip-by-function .writing-text {
+   .writing-text {
     color: #ffffff;
     font-family: "font-medium";
     font-size: 23px;
@@ -621,7 +636,7 @@
     padding-right: 10px;
   }
   
-  .matzip-by-function .arrow-button {
+   .arrow-button {
     object-fit: cover;
     width: 90%;
   }
@@ -629,3 +644,4 @@
  .empty-area {
     height: 200px;
  }
+

@@ -62,13 +62,7 @@ function PostMainHeader () {
           </div>
         </div>
     </div>
-    <div className="main">
-      <MatzipByFunction/>
-    </div>
-    <div className="footer">
-      <PostFooter/>
-    </div>
-  
+
   </div>
     
   );

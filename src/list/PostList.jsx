@@ -4,7 +4,7 @@ import { Pagination } from '@mui/material';
 import { useState } from 'react';
 
 function PostList({ data = [] }) {
-    const itemsPerPage = 10; // 한 페이지당 아이템 수
+    const itemsPerPage = 8; // 한 페이지당 아이템 수
     const [activePage, setActivePage] = useState(1); // 기본 활성화된 페이지 1로 설정
 
     // 현재 페이지에 해당하는 데이터 필터링
