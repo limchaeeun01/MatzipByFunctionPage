@@ -182,14 +182,12 @@
   
   .wrapper .slide_container .slide_wrapper {
     display: flex;
-    flex-wrap: nowrap;
   }
   
   .wrapper .slide_container .slide {
     display: flex;
     width: auto;
     justify-content: space-between;
-    flex-wrap: nowrap;
     height: auto;
   }
   
@@ -210,7 +208,7 @@
     z-index: 2;
     transition: transform 0.3s; /* 애니메이션 속성을 더 명확하게 설정 */
     transform: scale(1);
-    margin: 0 1.2%; /* 간격 설정 통합 */
+  
     height: auto; /* 각 리스트 아이템의 세로 길이를 100%로 설정 */
     display: flex; /* Flexbox 사용 */
     justify-content: center; /* 중앙 정렬 */
@@ -257,9 +255,10 @@
   }
   
   .matzip-by-function .post1 {
-    width: auto; /* 가로 크기를 자동으로 설정 */
-    height: 300px; /* 높이를 300px로 고정 */
+    width: auto; 
+    height: 300px; 
     object-fit: contain; /* 비율을 유지하며 이미지 전체가 들어가도록 조정 */
+    padding: 10px;
   }
   
   .matzip-by-function .frame {
@@ -302,13 +301,13 @@
   .matzip-by-function .label-4.active,
   .matzip-by-function .label-5.active,
   .matzip-by-function .label-6.active {
-    background-color: #c3c3c3; /* 짙은 회색 */
+    background-color: #c3c3c3; 
     cursor: pointer;
   }
 
-  @media (max-width: 600px) { /* 가로폭이 600px 이하일 때 */
+  @media (max-width: 600px) { 
     .feeling-btn-container {
-      justify-content: space-around; /* 세 개씩 줄바꿈 */
+      justify-content: space-around; 
     }
   }
   
@@ -583,7 +582,6 @@
     margin-top: 15px;
     font-size: 18px;
   }
-  
   
   
   /* 글쓰기 컨텐츠 */

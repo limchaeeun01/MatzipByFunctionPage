@@ -10,8 +10,8 @@ export const MatzipByFunction = () => {
     { id: 1, name: 'Smiley 1', src: '../../public/img/smiley.png' },
     { id: 2, name: 'Smiley 2', src: '../../public/img/smiley.png' },
     { id: 3, name: 'Smiley 3', src: '../../public/img/smiley.png' },
-    { id: 1, name: 'Smiley 1', src: '../../public/img/smiley.png' },
     { id: 2, name: 'Smiley 2', src: '../../public/img/smiley.png' },
+    { id: 3, name: 'Smiley 3', src: '../../public/img/smiley.png' },
   ];
 
   const [animate, setAnimate] = useState(true);
